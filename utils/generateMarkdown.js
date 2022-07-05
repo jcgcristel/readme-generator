@@ -99,19 +99,19 @@ function renderLicenseSection(license, username,) {
   `;
 }
 
+// Determines whether or not a License section should be added
 function renderTableOfContents(license) {
   let licenseTitle;
-
-  // Determines whether or not a License section should be added
+  
   // Blank license names will not generate a License section
   (!license.name) ? licenseTitle = `` : licenseTitle = `
-  [License](#license)`;
+  - [License](#license)`;
 
   return `## Table of Contents
-  [Installation](#installation)
-  [Usage](#usage)${licenseTitle}
-  [Contributing](#contributing)
-  [Question](#questions)`;
+  - [Installation](#installation)
+  - [Usage](#usage)${licenseTitle}
+  - [Contributing](#contributing)
+  - [Question](#questions)`;
 }
 
 // TODO: Create a function to generate markdown for README
@@ -144,7 +144,7 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
-  ${renderTableOfContents(license.name)}
+  ${renderTableOfContents(license)}
 
   ## Installation
   ${data.installation}
