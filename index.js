@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 import inquirer from "inquirer";
-import fs from 'fs';
-import {licenseList, generateMarkdown} from "./generateMarkdown.js";
+import fs, { writeFile } from 'fs';
+import {licenseList, generateMarkdown} from "./utils/generateMarkdown.js";
 
 // // Array of license names
 // const licenseNames = function() {
@@ -117,11 +117,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {  
   return inquirer.prompt(questions)
-    .then(answers => {
-      console.log(answers);
-      return generateMarkdown(answers)})
-    .then(md => console.log(md));
+    .then(answers => { return generateMarkdown(answers)})
+    .then(readMeData => { return writeToFile('./README.md', readMeData) });
 }
 
 // Function call to initialize app
-writeToFile('test.md', '# test')
+init();
