@@ -3,11 +3,6 @@ import inquirer from "inquirer";
 import fs, { writeFile } from 'fs';
 import {licenseList, generateMarkdown} from "./utils/generateMarkdown.js";
 
-// // Array of license names
-// const licenseNames = function() {
-//     return licenseList.map(licenseObj => licenseObj.name)  
-// }
-
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -90,17 +85,10 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-  // promptFileName = {
-  //   name: fileName,
-  //   type: 'input',
-  //   message: 'Name of your README file:'
-  // };
-
-  // return inquirer.prompt(promptFileName)
-  //   .then(answers => console.log(answers))
+function writeToFile(data) {
   return new Promise((resolve, reject) => {
-    fs.writeFile(fileName, data, e => {
+    // Writes generated markdown into a README.md
+    fs.writeFile('./README.md', data, e => {
       if (e) {
         reject(e);
         return;
@@ -118,7 +106,7 @@ function writeToFile(fileName, data) {
 function init() {  
   return inquirer.prompt(questions)
     .then(answers => { return generateMarkdown(answers)})
-    .then(readMeData => { return writeToFile('./README.md', readMeData) });
+    .then(readMeData => { return writeToFile(readMeData) });
 }
 
 // Function call to initialize app
