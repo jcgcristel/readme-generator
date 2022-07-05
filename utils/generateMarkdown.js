@@ -1,4 +1,4 @@
-// Default Licenses
+// An array of license objects which contains the license name, license badge, and license url
 const licenseList = [
   {
     name: 'GNU AGPLv3',
@@ -45,7 +45,8 @@ const licenseList = [
   }
 ]
 
-// Returns license object of the stated name
+// Returns license object which will allow to call the appropriate license property where needed
+// Example: getLicense('MIT License').link will return appropriate license url link to MIT License
 const getLicense = function(licenseName) {
     return licenseList.find(licenseObj => licenseObj.name == licenseName);
 }
@@ -100,6 +101,9 @@ function renderLicenseSection(license, username,) {
 
 function renderTableOfContents(license) {
   let licenseTitle;
+
+  // Determines whether or not a License section should be added
+  // Blank license names will not generate a License section
   (!license.name) ? licenseTitle = `` : licenseTitle = `
   [License](#license)`;
 
@@ -112,7 +116,12 @@ function renderTableOfContents(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  // variable to hold license object which will store the following
+  // name: for license name
+  // badge: for link to badge icon
+  // link: for the url to the license copy
   let license;
+
   // Determines if license is user generated via choice of [OTHER LICENSE]
   if (data.license == '[OTHER LICENSE]') {  
     license = {
@@ -121,6 +130,7 @@ function generateMarkdown(data) {
       link: data.licenseLink
     }
   }
+  // Else, license was chosen amongst the default options
   else {
     license = { 
       name: data.license,
