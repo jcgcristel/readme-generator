@@ -42,7 +42,7 @@ On success you will see the message:
 
     File Created
 
-This file can be found in the **/generated** folder. It will be named as you have designated appended with **_README.md**.
+This file can be found in the **/generated** folder. It will be named as you have designated appended with **_README.md**. Go ahead and rename this file to add to your portfolio.
 
 ### Note on License Prompt
 Additional prompts will be given when selecting [OTHER LICENSE].
