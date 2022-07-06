@@ -103,11 +103,16 @@ function writeToFile(data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {  
-  return inquirer.prompt(questions)
-    .then(answers => { return generateMarkdown(answers)})
-    .then(readMeData => { return writeToFile(readMeData) });
+function init() {
+  console.log(`=========================================  
+  READ ME GENERATOR: Follow the prompts
+=========================================`)
+
+  return inquirer.prompt(questions);
 }
 
 // Function call to initialize app
-init();
+init()  
+  .then(answers => { return generateMarkdown(answers)})
+  .then(readMeData => { return writeToFile(readMeData)})
+  .then(writeToFileResponse => {console.log(writeToFileResponse)});

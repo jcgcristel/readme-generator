@@ -69,7 +69,6 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license, username,) {
-  console.log(license.name);
    // Returns blank if license is blank
    if (license.name == '') { return ''}
    // If license is one of the default licenses
