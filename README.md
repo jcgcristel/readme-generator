@@ -56,6 +56,9 @@ Additional prompts will be given when selecting [OTHER LICENSE].
 ### Example
 ![Site Preview](assets\images\app-prev.png)
 
+### Demo
+https://youtu.be/LHfqCXgUueo
+
 ## Questions
 [jcgcristel's GitHub](https://github.com/jcgcristel)
 
