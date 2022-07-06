@@ -54,7 +54,7 @@ Additional prompts will be given when selecting [OTHER LICENSE].
 *Leaving these options blank will ensure no licensing section will be added to the final README.*
 
 ### Example
-![Site Preview](assets\images\app-prev.png)
+![Site Preview](/assets/images/app-prev.png)
 
 ### Demo
 https://youtu.be/LHfqCXgUueo
