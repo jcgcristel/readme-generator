@@ -6,16 +6,6 @@ const licenseList = [
     link: 'https://www.gnu.org/licenses/agpl-3.0'
   },
   {
-    name: 'GNU GPLv3',
-    badge: 'https://img.shields.io/badge/License-GPLv3-blue.svg',
-    link: ''
-  },
-  {
-    name: 'GNU LGPLv3',
-    badge: 'https://img.shields.io/badge/License-LGPL_v3-blue.svg',
-    link: 'https://www.gnu.org/licenses/lgpl-3.0'
-  },
-  {
     name: 'Mozilla Public License 2.0',
     badge: 'https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg',
     link: 'https://opensource.org/licenses/MPL-2.0'
