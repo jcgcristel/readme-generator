@@ -86,20 +86,34 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
-  return new Promise((resolve, reject) => {
-    // Writes generated markdown into a README.md
-    fs.writeFile('./README.md', data, e => {
-      if (e) {
-        reject(e);
-        return;
-      };
-
-      resolve({
-        ok: true,
-        message: 'File Created'
+  console.log(`========================================= 
+ Almost done! Name your README file 
+ (Do not include a file extension):
+=========================================`)
+  
+  let promptFileName = {
+    name: 'fileName',
+    type: 'input',
+    message: 'File name:'
+  }
+  
+  return inquirer.prompt(promptFileName)
+    .then(fileName => {
+      return new Promise((resolve, reject) => {
+        // Writes generated markdown into a README.md
+        fs.writeFile(`./generated/${fileName.fileName}_README.md`, data, e => {
+          if (e) {
+            reject(e);
+            return;
+          };
+    
+          resolve({
+            ok: true,
+            message: 'File Created'
+          });
+        });
       });
     });
-  });
 }
 
 // TODO: Create a function to initialize app
@@ -115,4 +129,4 @@ function init() {
 init()  
   .then(answers => { return generateMarkdown(answers)})
   .then(readMeData => { return writeToFile(readMeData)})
-  .then(writeToFileResponse => {console.log(writeToFileResponse)});
+  .then(writeToFileResponse => {console.log(writeToFileResponse.message)});

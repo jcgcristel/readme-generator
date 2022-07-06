@@ -1,7 +1,7 @@
-# Title [![Mozilla Public License 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+# Read Me Generator [![GNU AGPLv3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
   ## Description
-  Showing functionality of readme-generator
+  read
 
   ## Table of Contents
   - [Installation](#installation)
@@ -11,20 +11,20 @@
   - [Question](#questions)
 
   ## Installation
-  Install isntructions
+  r
 
   ## Usage
-  Usage info
+  r
   
   ## License
-  Copyright 2022 jcgcristel
+  Copyright 2022 s
   
-  Licensed under the Mozilla Public License 2.0, (the "License"), you may not use this file except 
+  Licensed under the GNU AGPLv3, (the "License"), you may not use this file except 
   in compliance under the terms stated in this License. 
   
   You may obtain a copy of the License at:
     
-    https://opensource.org/licenses/MPL-2.0
+    https://www.gnu.org/licenses/agpl-3.0
 
   Unless required by applicable law or agreed to in writing, software
   distributed under this License is distributed on an "AS IS" BASIS,
@@ -34,12 +34,12 @@
   limitations under the License.
   
   ## Contributing
-  Contribution guide
+  e
 
   ## Test
-  Test instruction
+  a
 
   ## Questions
-  [jcgcristel's GitHub](https://github.com/jcgcristel)
+  [s's GitHub](https://github.com/s)
 
-  For additional questions, you can email me at [jcg.cristel@gmail.com](mailto:jcg.cristel@gmail.com.)
+  For additional questions, you can email me at [sd](mailto:sd.)
