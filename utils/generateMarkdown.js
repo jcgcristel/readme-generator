@@ -69,22 +69,22 @@ function renderLicenseSection(license, username,) {
   let year = new Date().getFullYear();
 
   return `
-  ## License
-  Copyright ${year} ${username}
-  
-  Licensed under the ${license.name}, (the "License"), you may not use this file except 
-  in compliance under the terms stated in this License. 
-  
-  You may obtain a copy of the License at:
-    
-    ${license.link}
+## License
+Copyright ${year} ${username}
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under this License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+Licensed under the ${license.name}, (the "License"), you may not use this file except 
+in compliance under the terms stated in this License. 
 
-  See the License for specific language governing permissions and
-  limitations under the License.
+You may obtain a copy of the License at:
+  
+  ${license.link}
+
+Unless required by applicable law or agreed to in writing, software
+distributed under this License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+See the License for specific language governing permissions and
+limitations under the License.
   `;
 }
 
