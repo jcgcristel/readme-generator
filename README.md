@@ -1,45 +1,62 @@
-# Read Me Generator [![GNU AGPLv3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+# README Generator 
 
-  ## Description
-  read
+## Description
+README.md generator using the npm Inquirer.
 
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Question](#questions)
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Question](#questions)
 
-  ## Installation
-  r
+## Installation
+Ensure inquirer is installed using node.js via:
 
-  ## Usage
-  r
-  
-  ## License
-  Copyright 2022 s
-  
-  Licensed under the GNU AGPLv3, (the "License"), you may not use this file except 
-  in compliance under the terms stated in this License. 
-  
-  You may obtain a copy of the License at:
+    npm install inquirer
+
+## Usage
+A way to quickly generate README files via prompts with options to add licenses along with their appropriate badge and links.
+
+## Test
+Ensure you are in the correct directory where **index.js**, and in the console write:
+
+    node index.js
+
+If you see the following prompt, you can proceed with the README generation:
     
-    https://www.gnu.org/licenses/agpl-3.0
+    =========================================  
+     READ ME GENERATOR: Follow the prompts
+    =========================================
+    
+*If no prompt appears, double check you are in the correct directory and refer back to the Installation Instructions that you have the required modules installed.*
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under this License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+Once you have proceeded with the prompts, you will then be prompted to name your README file:
 
-  See the License for specific language governing permissions and
-  limitations under the License.
-  
-  ## Contributing
-  e
+    ========================================= 
+    Almost done! Name your README file 
+    (Do not include a file extension):
+    =========================================
+    File name: _
 
-  ## Test
-  a
+On success you will see the message:
 
-  ## Questions
-  [s's GitHub](https://github.com/s)
+    File Created
 
-  For additional questions, you can email me at [sd](mailto:sd.)
+This file can be found in the **/generated** folder. It will be named as you have designated appended with **_README.md**.
+
+### Note on License Prompt
+Additional prompts will be given when selecting [OTHER LICENSE].
+
+- License Name: name of license
+- License Badge: link to license icon/badge
+- License Link: link to license copy
+
+*Leaving these options blank will ensure no licensing section will be added to the final README.*
+
+### Example
+![Site Preview](assets\images\app-prev.png)
+
+## Questions
+[jcgcristel's GitHub](https://github.com/jcgcristel)
+
+For additional questions, you can email me at [jcg.cristel@gmail.com](mailto:jcg.cristel@gmail.com.).

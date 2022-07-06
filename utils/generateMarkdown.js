@@ -94,13 +94,13 @@ function renderTableOfContents(license) {
   
   // Blank license names will not generate a License section
   (!license.name) ? licenseTitle = `` : licenseTitle = `
-  - [License](#license)`;
+- [License](#license)`;
 
   return `## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)${licenseTitle}
-  - [Contributing](#contributing)
-  - [Question](#questions)`;
+- [Installation](#installation)
+- [Usage](#usage)${licenseTitle}
+- [Contributing](#contributing)
+- [Question](#questions)`;
 }
 
 // TODO: Create a function to generate markdown for README
@@ -130,27 +130,27 @@ function generateMarkdown(data) {
 
   return `# ${data.title} ${renderLicenseLink(license)}
 
-  ## Description
-  ${data.description}
+## Description
+${data.description}
 
-  ${renderTableOfContents(license)}
+${renderTableOfContents(license)}
 
-  ## Installation
-  ${data.installation}
+## Installation
+${data.installation}
 
-  ## Usage
-  ${data.usage}
-  ${renderLicenseSection(license, data.github)}
-  ## Contributing
-  ${data.contribution}
+## Usage
+${data.usage}
+${renderLicenseSection(license, data.github)}
+## Contributing
+${data.contribution}
 
-  ## Test
-  ${data.test}
+## Test
+${data.test}
 
-  ## Questions
-  [${data.github}'s GitHub](https://github.com/${data.github})
+## Questions
+[${data.github}'s GitHub](https://github.com/${data.github})
 
-  For additional questions, you can email me at [${data.email}](mailto:${data.email}.)
+For additional questions, you can email me at [${data.email}](mailto:${data.email}.)
 `;
 }
 
